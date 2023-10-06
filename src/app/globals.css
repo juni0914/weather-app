@@ -7,3 +7,10 @@ button {
   background-color: dodgerblue;
   cursor: pointer;
 }
+
+.weathericon {
+  width: 70px;
+  height: 70px;
+  vertical-align: middle;
+  margin-left: 10px;
+}

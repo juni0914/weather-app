@@ -4,6 +4,35 @@
 }
 
 .list li {
-    font-size: 15px;
+    font-size: 25px;
     line-height: 1.5;
+
 }
+
+
+.weatherlist li{
+border: 1px solid #ddd;
+border-radius: 4px;
+margin: 10px 0;
+padding: 10px;    
+list-style: none;
+
+}
+  
+  /* 날짜 헤더 스타일링 */
+.weatherlist li h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  /* 기온 및 강수확률 정보 스타일링 */
+  .weatherlist  li p {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  
+  /* 강수확률 텍스트 스타일링 */
+  .weatherlist li p span {
+    font-weight: bold;
+    color: #007BFF; /* 원하는 색상으로 변경 가능 */
+  }

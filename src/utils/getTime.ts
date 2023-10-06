@@ -15,13 +15,12 @@ export interface Response {
   }
   
 
-export const getTime = async (timeZone: string): Promise<Response> => {
+  export const getTime = async (timeZone: string): Promise<Response> => {
+    const cacheBustToken = Date.now();
     const res = await fetch(
-        `https://timeapi.io/api/Time/current/zone?timeZone=${timeZone}`,
-        {next: {tags: [
-            'time',
-        ]}}
-    )
+        `https://timeapi.io/api/Time/current/zone?timeZone=${timeZone}&cache_bust=${cacheBustToken}`,
+        // { next: { tags: ['time'] } }
+      );
     if (!res.ok) throw new Error('시간 정보를 불러올 수 없습니다.')
 
     return res.json();
