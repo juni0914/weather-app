@@ -6,7 +6,7 @@
 .list li {
     font-size: 25px;
     line-height: 1.5;
-
+    
 }
 
 
@@ -16,13 +16,14 @@ border-radius: 4px;
 margin: 10px 0;
 padding: 10px;    
 list-style: none;
+margin-right: 10px;
 
 }
   
   /* 날짜 헤더 스타일링 */
 .weatherlist li h3 {
     font-size: 1.2rem;
-    margin-bottom: 5px;
+
   }
   
   /* 기온 및 강수확률 정보 스타일링 */
@@ -35,4 +36,24 @@ list-style: none;
   .weatherlist li p span {
     font-weight: bold;
     color: #007BFF; /* 원하는 색상으로 변경 가능 */
+
   }
+
+  .weatherInfo {
+    margin-left: 15px;
+  }
+
+
+  .hourlyWeather {
+    display: flex;
+    margin-left: -30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .hourlyWeatherItem{
+    margin-right: 2px;
+    width: 180px;
+    
+  }
+

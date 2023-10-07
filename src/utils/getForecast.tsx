@@ -147,13 +147,20 @@ export interface Response {
 export const getForecast = async (
     location: string
     ): Promise<Response> => {
+      const cacheBustToken = Date.now();
     const res = await fetch(
-      
-        `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=7&aqi=no&alerts=no`
+        `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=7&aqi=no&alerts=no&cache_bust=${cacheBustToken}`,
+        // {
+        //   method: 'GET',
+        //   headers: {
+        //     'Cache-Control': 'no-cache', // 캐시 사용 금지
+        //     // 다른 필요한 헤더 추가
+        //   },
+        // }
       );
       if(!res.ok) {
         if(!res.ok) throw new Error ('날씨 정보를 가져올 수 없습니다.')
       }
-
+      console.log('API 호출됨')
       return res.json();
 }

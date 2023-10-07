@@ -12,5 +12,9 @@ button {
   width: 70px;
   height: 70px;
   vertical-align: middle;
-  margin-left: 10px;
+  margin-left: 23px;
+}
+
+.infoDiv {
+  margin-left: 40px;
 }

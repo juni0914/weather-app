@@ -53,15 +53,16 @@ const API_KEY = process.env.NEXT_PUBLIC_API_KEY
 export const getCurrentWeather = async (
     location: string
     ): Promise<Response> => {
+      const cacheBustToken = Date.now();
     const res = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}&aqi=no`,
-      {
-        method: 'GET',
-        headers: {
-          'Cache-Control': 'no-cache', // 캐시 사용 금지
-          // 다른 필요한 헤더 추가
-        },
-      }
+      `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}&aqi=no&cache_bust=${cacheBustToken}`,
+      // {
+      //   method: 'GET',
+      //   headers: {
+      //     'Cache-Control': 'no-cache', // 캐시 사용 금지
+      //     // 다른 필요한 헤더 추가
+      //   },
+      // }
     );
     
     if(!res.ok) {
