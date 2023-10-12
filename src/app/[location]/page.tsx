@@ -33,7 +33,7 @@ export default async function Detail({ params, searchParams }: Props){
         <>
         <div className="forecastDiv">
             <div className="infoDiv">
-                <h1>{ name }의 7일 예보</h1> <h3>{time.year}년 {time.month}월 {time.day}일 / 마지막 업데이트 시간 : {currentRes.current.last_updated}   <HomeButton/></h3>
+                <h1>{ name }의 일주일 일기 예보</h1> <h3>{time.year}년 {time.month}월 {time.day}일 / 마지막 업데이트 시간 : {currentRes.current.last_updated}   <HomeButton/></h3>
                 <h2>
                     현재 시간은 {time.time}:{time.seconds}입니다. <br/><br/>
                     현재 기온 : {currentRes.current.temp_c}°C 
